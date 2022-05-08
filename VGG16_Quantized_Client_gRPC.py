@@ -78,7 +78,8 @@ for images in os.listdir(folder_dir):
         predictions = interpreter.get_tensor(output_index)
         data = json.dumps({"instances": predictions.tolist()})
         print(run_prediction(data,headers,endpoint))
-
+        print()
+        print()
 
 # ## Sending tensor to TensorFlow server to process the rest of the NN
 

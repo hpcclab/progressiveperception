@@ -1,10 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-# Inference with Quantized Client model and Non-quantized Server model
-# ## Loading libraries
 
-# In[10]:
-
+print("test test test")
 
 import tensorflow
 import numpy as np
@@ -62,6 +57,11 @@ output_details = interpreter.get_output_details()
 
 
 folder_dir = sys.argv[1]
+secondary_dir = "/opt/app/images/"
+if len(os.listdir(folder_dir))==0:
+    print("Empty directory")
+    print("folder_dir = "+folder_dir)
+    print("Directory = "+os.listdir(folder_dir))
 for images in os.listdir(folder_dir):
     if images.endswith(".jpg") or images.endswith(".jpeg"):
         image = load_img(folder_dir+images, target_size=(224, 224))
