@@ -8,9 +8,7 @@ WORKDIR /opt/app
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt 
 
-ADD VGG16_Client.tflite .
-ADD VGG16_Quantized_Client_gRPC.py .
-ADD VGG16_Quantized_Client_gRPC.py /opt/app
+COPY VGG16_Client.tflite .
+COPY VGG16_Quantized_Client_gRPC.py .
 
 ENTRYPOINT ["python3", "VGG16_Quantized_Client_gRPC.py"]
-CMD ["dirPath"]
