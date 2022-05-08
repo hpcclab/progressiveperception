@@ -15,6 +15,8 @@ The python scripts can be run on their own. The python script operates on a dire
     
 I have included python files that partition the models and quantize them as well for reference.
     
+The server side uses the TensorFlow/Serving container from Docker and loads the server model into it.
+    
 *************************
 ****** IN PROGRESS ******
 *************************
